@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portofolio Reza Octa Fahlevi - Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <meta name="deskripsi" content="Portofolio Reza Octa Fahlevi">
+        <meta name="keywords" content="Portofolio">
+        <meta name="author" content="Reza Octa Fahlevi">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="Reza.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    </head>
+
+    <body>
+        <!-- membuat navigasi logo dan menu -->
+        <nav>
+                <div class="wrapper">
+                 <!-- <div class="judul" ><a href="">Reza Octa Fahlevi</a></div> -->
+                 <div class=" judul"><h1>Reza Octa Fahlevi</h1></div>
+                    <div class="navigasi">  
+                        <ul>
+                            <li><a href="Reza.html">HOME</a></li>
+                            <li><a href="PROFIL.html">PROFIL</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+        <!-- Penjelasan diskripsi -->
+        <div id="reza">
+            <div class="contenkiri">
+                <h1>Reza Octa Fahlevi</h1>
+                <img src="REZAKU.jpg" alt="Reza FAHLEVI">
+                <h2>MAHASISWA</h2>
+            </div>
+            <div class="logo21">
+                <a class="yt" href="https://www.youtube.com/channel/UCoQoFN3p_pumfMWSgM51X4w"><i class="fab fa-youtube fa-2x"></i></a>
+                <a class="git" href="https://github.com/Rezaoctafahlevi10"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+            <div class="contenkanan">
+                <div class="kiricuy">
+                    <p class="penjelasancuy">Jika anda ingin, bekerjasama atau belajar bareng dengan saya. 
+                        Anda dapat menghubungi Kontak yang ada di bawah ini.
+                        Atau anda dapat melihat project atau karya karya saya bisa Anda kunjungi di samping ini</p> <br> </div>
+                <div class="tabel">
+                    <div class="bungkustabel">
+                        <h7>
+                            atau
+                        </h7>
+                        <form onsubmit="sendEmail(); reset(); return false;">
+                            <h5>Hubungi</h5>
+                            <input type="text" id="name" placeholder="Nama" required>
+                            <input type="text" id="email" placeholder="Email" required>
+                            <input type="text" id="phone" placeholder="Phone" required>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Pesan"></textarea>
+                            <button type="submit">kirim pesan</button>
+                        </form>
+                    </div>
+                </div>    
+                </div>
+            </div>
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "fahlevi045@gmail.com",
+                    Password : "Rezaoctafahlevi",
+                    To : 'leviutama@gmail.com',
+                    From : document.getElementById("email").value,
+                    Subject : "This is the subject",
+                    Body : "Nama: " +document.getElementById("name").value
+                            + "<br> Email: " +document.getElementById("email").value
+                            + "<br> Phone: " +document.getElementById("phone").value
+                            + "<br> Pesan: " +document.getElementById("phone").value
+                }).then(
+                message => alert("pesan sukses")
+                );
+}
+        </script>
+       <footer id="cuykontak">
+            <div class="contactku">
+                <h1>Contact</h1>
+                <a class="igku" href="https://www.instagram.com/fahlevi.reza10"><i class="fab fa-instagram fa-3x"></i><span class="iglink1">https://www.instagram.com/fahlevi.reza10/</span></a>
+                <a class="waku" href="https://wa.me/6282131959759"><i class="fab fa-whatsapp fa-3x"></i><span class="walink1">https://wa.me/6282131959759/</span></a>
+                <a class="linkedku" href="https://www.linkedin.com/in/reza-octa-fahlevi-a78366208/"><i class="fab fa-linkedin fa-3x"></i><span class="linkiedlink1">https://www.linkedin.com/in/reza-octa-fahlevi-a78366208/</span></a>
+            </div>
+            </div>
+        </footer>
+         <!-- coppyright -->
+         <div id="coppyrightku">
+            <div class="coppyright1">
+                <i class="fa-solid fa-copyright fa-2x"></i> <h3>copyright | REZA OCTA FAHLEVI 2022</h3>
+            </div>
+        </div>
+    </body>
+</html>
